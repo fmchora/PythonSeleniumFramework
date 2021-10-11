@@ -1,9 +1,4 @@
-
-import pytest
-
-from Utilities.baseClass import BaseClass
-from pageObjects.copartMainPage import homePage
-
+from utilities.BaseClass import BaseClass
 
 class Testchallenges(BaseClass):
     def test_challengeOne(self):
