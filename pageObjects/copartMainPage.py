@@ -12,15 +12,33 @@ class homePage:
         self.driver.find_element(*homePage.test).click()
 
     def getMakes(self):
+
+        dictionary = {}
+        keyToNavigate = ""
+
         e = self.driver.find_element(*homePage.makes_homePage)
         self.driver.execute_script("arguments[0].scrollIntoView();", e)
         elements = self.driver.find_elements_by_xpath("//*[@id='tabMakes']/div/span")
         size = len(elements)
         for x in range(size):
-            text = self.driver.find_element_by_xpath("//*[@id='tabMakes']/div/span[" + str(x + 1) +"]/span/a").text
-            e = self.driver.find_element_by_xpath("//*[@id='tabMakes']/div/span[" + str(x + 1) + "]/span/a")
+            e = self.driver.find_element_by_xpath("//*[@id='tabMakes']/div/span[" + str(x + 1) +"]/span/a")
+            make = e.text
             link = e.get_attribute('href')
-            print(text)
-            print(link)
+            #print(make)
+            #print(link)
+            dictionary[make] = link
+            keyToNavigate =  make
+
+        for key, value in dictionary.items():
+            print(key, ' : ', value)
+
+        if keyToNavigate in dictionary.keys():
+            print(f"Yes, key: '{keyToNavigate}' exists in dictionary")
+            self.driver.get(dictionary[keyToNavigate])
+            self.driver.implicitly_wait(5)  # seconds
+            text = self.driver.find_element_by_xpath("//*[@id='searchResultsHeader']/span").text
+            assert keyToNavigate in text
+        else:
+            print(f"No, key: '{keyToNavigate}' does not exists in dictionary")
 
 
