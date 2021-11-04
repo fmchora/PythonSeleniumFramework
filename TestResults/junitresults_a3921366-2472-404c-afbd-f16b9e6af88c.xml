@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="6.846" timestamp="2021-10-29T19:19:43.965727" hostname="Felipe-PC"><testcase classname="challenges.test_challengeSeven.Testchallenges" name="test_challengeOne" file="challenges\test_challengeSeven.py" line="4" time="6.824"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+Acura  :  https://www.copart.com/vehicle-search-make/acura?displayStr=Acura&amp;from=/
+Audi  :  https://www.copart.com/vehicle-search-make/audi?displayStr=Audi&amp;from=/
+BMW  :  https://www.copart.com/vehicle-search-make/bmw?displayStr=BMW&amp;from=/
+Buick  :  https://www.copart.com/vehicle-search-make/buick?displayStr=Buick&amp;from=/
+Cadillac  :  https://www.copart.com/vehicle-search-make/cadillac?displayStr=Cadillac&amp;from=/
+Chevrolet  :  https://www.copart.com/vehicle-search-make/chevrolet?displayStr=Chevrolet&amp;from=/
+Chrysler  :  https://www.copart.com/vehicle-search-make/chrysler?displayStr=Chrysler&amp;from=/
+Dodge  :  https://www.copart.com/vehicle-search-make/dodge?displayStr=Dodge&amp;from=/
+Ford  :  https://www.copart.com/vehicle-search-make/ford?displayStr=Ford&amp;from=/
+Freightliner  :  https://www.copart.com/vehicle-search-make/freightliner?displayStr=Freightliner&amp;from=/
+GMC  :  https://www.copart.com/vehicle-search-make/gmc?displayStr=GMC&amp;from=/
+Harley  :  https://www.copart.com/vehicle-search-make/harley?displayStr=Harley&amp;from=/
+Honda  :  https://www.copart.com/vehicle-search-make/honda?displayStr=Honda&amp;from=/
+Hummer  :  https://www.copart.com/vehicle-search-make/hummer?displayStr=Hummer&amp;from=/
+Hyundai  :  https://www.copart.com/vehicle-search-make/hyundai?displayStr=Hyundai&amp;from=/
+Infiniti  :  https://www.copart.com/vehicle-search-make/infiniti?displayStr=Infiniti&amp;from=/
+International  :  https://www.copart.com/vehicle-search-make/international?displayStr=International&amp;from=/
+Isuzu  :  https://www.copart.com/vehicle-search-make/isuzu?displayStr=Isuzu&amp;from=/
+Jaguar  :  https://www.copart.com/vehicle-search-make/jaguar?displayStr=Jaguar&amp;from=/
+Jeep  :  https://www.copart.com/vehicle-search-make/jeep?displayStr=Jeep&amp;from=/
+Kia  :  https://www.copart.com/vehicle-search-make/kia?displayStr=Kia&amp;from=/
+Lamborghini  :  https://www.copart.com/vehicle-search-make/lamborghini?displayStr=Lamborghini&amp;from=/
+Land Rover  :  https://www.copart.com/vehicle-search-make/landrover?displayStr=Land%20Rover&amp;from=/
+Lexus  :  https://www.copart.com/vehicle-search-make/lexus?displayStr=Lexus&amp;from=/
+Lincoln  :  https://www.copart.com/vehicle-search-make/lincoln?displayStr=Lincoln&amp;from=/
+Maserati  :  https://www.copart.com/vehicle-search-make/maserati?displayStr=Maserati&amp;from=/
+Mazda  :  https://www.copart.com/vehicle-search-make/mazda?displayStr=Mazda&amp;from=/
+Mclaren  :  https://www.copart.com/vehicle-search-make/mclarenautomotive?displayStr=Mclaren&amp;from=/
+Mercedes-Benz  :  https://www.copart.com/vehicle-search-make/mercedesbenz?displayStr=Mercedes-Benz&amp;from=/
+Mini  :  https://www.copart.com/vehicle-search-make/mini?displayStr=Mini&amp;from=/
+Mitsubishi  :  https://www.copart.com/vehicle-search-make/mitsubishi?displayStr=Mitsubishi&amp;from=/
+Nissan  :  https://www.copart.com/vehicle-search-make/nissan?displayStr=Nissan&amp;from=/
+Polaris  :  https://www.copart.com/vehicle-search-make/polaris?displayStr=Polaris&amp;from=/
+Pontiac  :  https://www.copart.com/vehicle-search-make/pontiac?displayStr=Pontiac&amp;from=/
+Porsche  :  https://www.copart.com/vehicle-search-make/porsche?displayStr=Porsche&amp;from=/
+Ram  :  https://www.copart.com/vehicle-search-make/ram?displayStr=Ram&amp;from=/
+Rolls-Royce  :  https://www.copart.com/vehicle-search-make/rollsroyce?displayStr=Rolls-Royce&amp;from=/
+Saab  :  https://www.copart.com/vehicle-search-make/saab?displayStr=Saab&amp;from=/
+Scion  :  https://www.copart.com/vehicle-search-make/scion?displayStr=Scion&amp;from=/
+Subaru  :  https://www.copart.com/vehicle-search-make/subaru?displayStr=Subaru&amp;from=/
+Suzuki  :  https://www.copart.com/vehicle-search-make/suzuki?displayStr=Suzuki&amp;from=/
+Tesla  :  https://www.copart.com/vehicle-search-make/tesla?displayStr=Tesla&amp;from=/
+Toyota  :  https://www.copart.com/vehicle-search-make/toyota?displayStr=Toyota&amp;from=/
+Volkswagen  :  https://www.copart.com/vehicle-search-make/volkswagen?displayStr=Volkswagen&amp;from=/
+Volvo  :  https://www.copart.com/vehicle-search-make/volvo?displayStr=Volvo&amp;from=/
+Yamaha  :  https://www.copart.com/vehicle-search-make/yamaha?displayStr=Yamaha&amp;from=/
+Yes, key: 'Yamaha' exists in dictionary
+Hello world
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>
