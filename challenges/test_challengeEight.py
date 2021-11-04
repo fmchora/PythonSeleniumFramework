@@ -1,10 +1,14 @@
-from pageObjects.copartMainPage import homePage
-from utilities.BaseClass import BaseClass
+import requests
 
-class Testchallenges(BaseClass):
+class Testchallenges():
     def test_challengeOne(self):
-        self.driver.get("https://www.copart.com/")
-        copa = homePage(self.driver)
-        copa.getMakes()
-        #test1.cleckSearch()
-        print("Hello world")
+        def test_challengeOne(self):
+            url = 'https://www.copart.com/public/lotSearchResultsPage'
+            myobj = {'query': 'toyota camry'}
+
+            x = requests.post(url, data=myobj)
+
+            print("Test")
+
+            print(x.text)
+
