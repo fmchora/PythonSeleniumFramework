@@ -8,6 +8,12 @@ class homePage:
     test = (By.CSS_SELECTOR, "#search-form > div > div.col-md-9.col-sm-6.col-xs-6.pad0 > div > span > button > span")
     makes_homePage = (By.XPATH, "//*[@id='Serverside Quickpicks']/div/div/div[1]/ul/li[1]/a")
 
+    searchBar = (By.XPATH, "//*[@id='input-search']")
+    searchButton = (By.XPATH, "//*[@id='search-form']/div/div[1]/div/span/button/span")
+    text = ""
+
+
+
     def cleckSearch(self):
         self.driver.find_element(*homePage.test).click()
 
@@ -40,5 +46,32 @@ class homePage:
             assert keyToNavigate in text
         else:
             print(f"No, key: '{keyToNavigate}' does not exists in dictionary")
+
+    def searchCar(self, car):
+        self.driver.find_element(*homePage.searchBar).send_keys(car)
+        self.driver.find_element(*homePage.searchButton).click()
+
+    def findIfModelExist(self, carModel):
+        elements = self.driver.find_elements_by_xpath("//*[@id='serverSideDataTable']/tbody/tr[3]/td")
+        size = len(elements)
+        for x in range(size):
+            e = self.driver.find_element_by_xpath("//*[@id='serverSideDataTable']/tbody/tr["+str(x + 1)+"]/td[5]/span")
+            make = e.text
+
+            if carModel == make:
+                assert make == "PORSCHE"
+                break
+            else:
+                print("Model not founded")
+
+
+
+
+
+
+
+
+
+
 
 
