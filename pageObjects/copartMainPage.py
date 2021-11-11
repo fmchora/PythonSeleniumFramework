@@ -11,7 +11,44 @@ class homePage:
     searchBar = (By.XPATH, "//*[@id='input-search']")
     searchButton = (By.XPATH, "//*[@id='search-form']/div/div[1]/div/span/button/span")
     popularVehicles = (By.XPATH, "//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/div/h2/span")
+    dropdownEntries = (By.XPATH, "//*[@id='serverSideDataTable_length']/label/select")
+    onehundredEntries = (By.XPATH, "//*[@id='serverSideDataTable_length']/label/select/option[3]")
 
+    def getTotalModel(self,model):
+        self.driver.implicitly_wait(1)  # seconds
+        self.driver.find_element(*homePage.dropdownEntries).click()
+        self.driver.find_element(*homePage.onehundredEntries).click()
+        self.driver.implicitly_wait(10)  # seconds
+        elements = self.driver.find_elements_by_xpath("//*[@id='serverSideDataTable']/tbody/tr/td[5]/span")
+        size = len(elements)
+        dictionary = {}
+        dictionary2 = {"REAR END":0,"FRONT END":0,"MINOR DENT/SCRATCHES":0,"UNDERCARRIAGE":0,"MISC":0}
+        for x in range(100):
+            e = self.driver.find_element_by_xpath("//*[@id='serverSideDataTable']/tbody/tr[" + str(x + 1) +"]/td[6]/span")
+            make = e.text
+            self.driver.execute_script("arguments[0].scrollIntoView();", e)
+            if make in dictionary:
+                dictionary[make] = dictionary[make] + 1
+            else:
+                dictionary[make] = 1
+
+            d = self.driver.find_element_by_xpath("//*[@id='serverSideDataTable']/tbody/tr[" + str(x + 1) +"]/td[12]/span")
+            damages = d.text
+            if damages == "REAR END":
+                dictionary2["REAR END"] = dictionary2["REAR END"] + 1
+            elif damages == "FRONT END":
+                dictionary2["FRONT END"] = dictionary2["FRONT END"] + 1
+            elif damages == "MINOR DENT/SCRATCHES":
+                dictionary2["MINOR DENT/SCRATCHES"] = dictionary2["MINOR DENT/SCRATCHES"] + 1
+            elif damages == "UNDERCARRIAGE":
+                dictionary2["UNDERCARRIAGE"] = dictionary2["UNDERCARRIAGE"] + 1
+            else:
+                dictionary2["MISC"] = dictionary2["MISC"] + 1
+
+        for key, value in dictionary.items():
+                print(key, ' : ', value)
+        for key, value in dictionary2.items():
+            print(key, ' : ', value)
 
 
     def cleckSearch(self):
