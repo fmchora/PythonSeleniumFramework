@@ -10,7 +10,7 @@ class homePage:
 
     searchBar = (By.XPATH, "//*[@id='input-search']")
     searchButton = (By.XPATH, "//*[@id='search-form']/div/div[1]/div/span/button/span")
-    text = ""
+    popularVehicles = (By.XPATH, "//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/div/h2/span")
 
 
 
@@ -63,6 +63,27 @@ class homePage:
                 break
             else:
                 print("Model not founded")
+
+    def getPopularVehicles(self):
+        # e = self.driver.find_element(*homePage.popularVehicles)
+        # self.driver.execute_script("arguments[0].scrollIntoView();", e)
+        y = 1
+        dictionary = {}
+        for y in range(3):
+            elements = self.driver.find_elements_by_xpath("//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/span/span")
+            size = len(elements)
+            for x in range(size):
+                m = self.driver.find_element_by_xpath("//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/span/span["+str(x + 1)+"]/span/div/div[2]/div[1]/div[1]/strong")
+                make = m.text
+                l = self.driver.find_element_by_xpath("//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/span/span["+str(x + 1)+"]/span/div/div[2]/div[2]/div[1]/a")
+                link = l.get_attribute('href')
+                print(make + " - " + link)
+                dictionary[make] = link
+            self.driver.implicitly_wait(1)  # seconds
+            nextButton = self.driver.find_element_by_xpath("//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/div/span/span[3]")
+            nextButton.click()
+        #print(dictionary)
+
 
 
 
