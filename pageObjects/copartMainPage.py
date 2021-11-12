@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class homePage:
     def __init__(self, driver):
         self.driver = driver
@@ -13,6 +12,7 @@ class homePage:
     popularVehicles = (By.XPATH, "//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/div/h2/span")
     dropdownEntries = (By.XPATH, "//*[@id='serverSideDataTable_length']/label/select")
     onehundredEntries = (By.XPATH, "//*[@id='serverSideDataTable_length']/label/select/option[3]")
+    firstResult = (By.XPATH, "//*[@id='serverSideDataTable']/tbody/tr[1]/td[2]/div[1]/a/img")
 
     def getTotalModel(self,model):
         self.driver.implicitly_wait(1)  # seconds
@@ -85,8 +85,10 @@ class homePage:
             print(f"No, key: '{keyToNavigate}' does not exists in dictionary")
 
     def searchCar(self, car):
+        self.driver.implicitly_wait(1)  # seconds
         self.driver.find_element(*homePage.searchBar).send_keys(car)
         self.driver.find_element(*homePage.searchButton).click()
+        self.driver.implicitly_wait(1)  # seconds
 
     def findIfModelExist(self, carModel):
         elements = self.driver.find_elements_by_xpath("//*[@id='serverSideDataTable']/tbody/tr[3]/td")
@@ -120,6 +122,12 @@ class homePage:
             nextButton = self.driver.find_element_by_xpath("//*[@id='Search Rec Engine']/div/div/div/div/div/recommendation-engine/div/div/div/div/div/span/span[3]")
             nextButton.click()
         #print(dictionary)
+
+    def tryClickFirstResult(self):
+        try:
+            self.driver.find_element(*homePage.firstResult).click()
+        except Exception as inst:
+            self.driver.save_screenshot('ss.png')
 
 
 
