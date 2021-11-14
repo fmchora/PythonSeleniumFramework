@@ -1,11 +1,11 @@
-Toyota camry, 35764
-Toyota camry, 35764
-Challenger, 1713
-camaro, 1615
-Ram, 6416
-CADILLAC ESCALADE, 3141
-4Runner, 1326
-JEEP GRAND CHEROKEE, 18433
+Toyota camry, 35774
+Toyota camry, 35774
+Challenger, 1714
+camaro, 1618
+Ram, 6421
+CADILLAC ESCALADE, 3144
+4Runner, 1328
+JEEP GRAND CHEROKEE, 18437
 370z, 156
 Corvette, 467
 Mustang, 2475

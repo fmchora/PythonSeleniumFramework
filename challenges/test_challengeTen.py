@@ -3,7 +3,7 @@ import json
 import pandas
 
 class Testchallenges():
-    def test_challengeEight(self):
+    def test_challengeTen(self):
         excel_data_df = pandas.read_excel('test10.xlsx')
         columns = excel_data_df.columns.size
         rows = excel_data_df.index.size
