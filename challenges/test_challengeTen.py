@@ -1,6 +1,6 @@
 import requests
 import json
-import pandas
+
 import math
 
 class Testchallenges():
