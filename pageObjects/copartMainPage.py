@@ -23,7 +23,7 @@ class homePage:
         size = len(elements)
         dictionary = {}
         dictionary2 = {"REAR END":0,"FRONT END":0,"MINOR DENT/SCRATCHES":0,"UNDERCARRIAGE":0,"MISC":0}
-        for x in range(100):
+        for x in range(99):
             e = self.driver.find_element_by_xpath("//*[@id='serverSideDataTable']/tbody/tr[" + str(x + 1) +"]/td[6]/span")
             make = e.text
             self.driver.execute_script("arguments[0].scrollIntoView();", e)
