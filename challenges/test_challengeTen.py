@@ -4,7 +4,8 @@ import pandas
 
 class Testchallenges():
     def test_challengeTen(self):
-        excel_data_df = pandas.read_excel('test10.xlsx')
+        # excel_data_df = pandas.read_excel('test10.xlsx')
+        excel_data_df = pandas.read_csv('testten.csv')
         columns = excel_data_df.columns.size
         rows = excel_data_df.index.size
         dictionary = {}
