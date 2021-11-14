@@ -1,8 +1,6 @@
 import requests
 import json
 
-import math
-
 class Testchallenges():
     def test_challengeEight(self):
         excel_data_df = pandas.read_excel('test10.xlsx')

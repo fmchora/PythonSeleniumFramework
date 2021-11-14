@@ -19,7 +19,6 @@ cffi~=1.15.0
 idna~=3.3
 pluggy~=1.0.0
 iniconfig~=1.1.1
-numpy~=1.21.4
 certifi~=2021.10.8
 six~=1.16.0
 urllib3~=1.26.7

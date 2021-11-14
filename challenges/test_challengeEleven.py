@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from pageObjects.copartMainPage import homePage
 from utilities.BaseClass import BaseClass
 
 class Testchallenges(BaseClass):
