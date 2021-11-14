@@ -26,3 +26,4 @@ pyparsing~=2.4.7
 pycparser~=2.20
 setuptools~=57.0.0
 wsproto~=1.0.0
+webdriver-manager~=3.5.2
