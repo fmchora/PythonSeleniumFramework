@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.170" timestamp="2021-11-05T19:27:59.529335" hostname="Felipe-PC"><testcase classname="challenges.test_challengeEight.Testchallenges" name="test_challengeOne" file="challenges\test_challengeEight.py" line="3" time="0.004"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>

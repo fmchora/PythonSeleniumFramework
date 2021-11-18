@@ -75,14 +75,15 @@ class homePage:
         for key, value in dictionary.items():
             print(key, ' : ', value)
 
-        if keyToNavigate in dictionary.keys():
-            print(f"Yes, key: '{keyToNavigate}' exists in dictionary")
-            self.driver.get(dictionary[keyToNavigate])
-            self.driver.implicitly_wait(5)  # seconds
-            text = self.driver.find_element_by_xpath("//*[@id='searchResultsHeader']/span").text
-            assert keyToNavigate in text
-        else:
-            print(f"No, key: '{keyToNavigate}' does not exists in dictionary")
+        for keyToNavigate in dictionary.keys():
+            if keyToNavigate in dictionary.keys():
+                print(f"Yes, key: '{keyToNavigate}' exists in dictionary")
+                self.driver.get(dictionary[keyToNavigate])
+                self.driver.implicitly_wait(5)  # seconds
+                text = self.driver.find_element_by_xpath("//*[@id='searchResultsHeader']/span").text
+                assert keyToNavigate in text
+            else:
+                print(f"No, key: '{keyToNavigate}' does not exists in dictionary")
 
     def searchCar(self, car):
         self.driver.implicitly_wait(1)  # seconds

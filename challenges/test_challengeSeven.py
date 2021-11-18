@@ -6,5 +6,3 @@ class Testchallenges(BaseClass):
         self.driver.get("https://www.copart.com/")
         copa = homePage(self.driver)
         copa.getMakes()
-        #test1.cleckSearch()
-        print("Hello world")
